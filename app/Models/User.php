@@ -7,9 +7,12 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User
@@ -30,9 +33,9 @@ use Spatie\Permission\Traits\HasRoles;
  *
  * @package App\Models
  */
-class User extends Model
+class User extends Authenticatable
 {
-	use HasRoles;
+	use HasRoles, Notifiable;
 	protected $connection = 'mysql';
 	protected $table = 'users';
 
