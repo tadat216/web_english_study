@@ -2,23 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ExamTypeController;
-
-Route::get('/', function () {
-    return view('user.home');
-});
-
-//route cho trang thư viện đề thi: tests-library
-
-Route::get('/tests', function () {
-    return view('user.tests-library'); 
-});
-
-Route::get('/tests', [ExamTypeController::class, 'getExamTypesForExamLibrary']);
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,3 +14,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware('web')
+    ->group(function () {
+        require base_path('routes/admin.php');
+        require base_path('routes/user.php');
+    });

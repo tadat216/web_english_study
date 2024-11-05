@@ -148,10 +148,6 @@
       @yield('content')
     </div>
 
-    <!-- <main>
-        @yield('content')
-    </main> -->
-
     <div class='footer-wrapper'>
             <div class="footer-container">
                 <footer>

@@ -3,16 +3,18 @@
 <div class="content-header pb-0 gray-bg">
   <div class="container pb-0">
     <div class="row">
-      <div class="col-12 col-md-3 order-md-2">
+      <!-- hiển thị user -->
+     @auth
+     <div class="col-12 col-md-3 order-md-2">
        <div class="user-target-info-box">
           <div class="user-target-user">
             <div>
               <span class="account-profile-img md">
-               <img src="/static/img/user_icon.png" alt="tadat216">
+               <img src="/static/img/user_icon.png" alt="{{auth()->user()->name}}">
              </span>
             </div>
             <div class="text-center">
-              tadat216
+              {{auth()->user()->name}}
             </div>
           </div>
           <div class="divider sm"></div>
@@ -35,72 +37,12 @@
         </div>
         <br>
      </div>
+     @endauth
      <div class="col-12 col-md-9 order-md-1">
         <h1 id="thư-viện-đề-thi">
           Thư viện đề thi
        </h1>
        <br>
-       <!-- <div class="test-exams">
-          <ul class="nav nav-pills flex-wrap">
-            <li class="nav-item w-auto">
-              <a class="nav-link active" href="/tests/">Tất cả</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/ielts/">IELTS Academic</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/ielts-general/">IELTS General</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/toeic/">TOEIC</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-1/">HSK 1</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-2/">HSK 2</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-3/">HSK 3</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-4/">HSK 4</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-5/">HSK 5</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hsk-6/">HSK 6</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/topik-i/">TOPIK I</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/topik-ii/">TOPIK II</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/toan-thptqg/">Toán THPTQG</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/tieng-anh-thptqg/">Tiếng Anh THPTQG</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/sinh-hoc-thptqg/">Sinh học THPTQG</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/hoa-hoc-thptqg/">Hóa học THPTQG</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/vat-ly-thptqg/">Vật lý THPTQG</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/sat/">NEW SAT</a>
-            </li>
-           <li class="nav-item w-auto">
-              <a class="nav-link " href="/tests/act/">ACT</a>
-            </li>
-         </ul>
-        </div> -->
         <div class="test-exams">
           <ul class="nav nav-pills flex-wrap">
             <li class="nav-item w-auto">
