@@ -1,17 +1,12 @@
-﻿
-@{
-    Layout = "";
-}
-
-<!-- Sidebar -->
+﻿<!-- Sidebar -->
 <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-            <img src="~/Content/client/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="{{asset('admintle/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-            <a href="#" class="d-block">Xin chào, @User.Identity.Name</a>
+            <a href="#" class="d-block">Xin chào</a>
 
         </div>
 
@@ -55,14 +50,7 @@
 
                 </ul>
             </li>
-            @*<li class="nav-item">
-                    <a href="~/Admin/Order/SaleReport" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Thống kê báo cáo
-                        </p>
-                    </a>
-                </li>*@
+
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
@@ -133,70 +121,47 @@
                     </li>
                 </ul>
             </li>
-            @if (this.User.IsInRole("Admin"))
-            {
-
-
-                <li class="nav-item">
-                    <a href="~/Admin/Role" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Danh sách quyền
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="~/Admin/Account" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Danh sách tài khoản
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="~/Admin/Parameters" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Danh sách tham số
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="~/Admin/BackupAndRestore" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Sao lưu/Phục hồi
-                        </p>
-                    </a>
-                </li>
-            }
             <li class="nav-item">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <div>
-                        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            <button type="submit" class="nav-link">
-                                <i class="nav-icon fas fa-sign-out-alt"></i>
-                                <p>Đăng xuất</p>
-                            </button>
-                        }
-                    </div>
-                }
+                <a href="~/Admin/Role" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Danh sách quyền
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="~/Admin/Account" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Danh sách tài khoản
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="~/Admin/Parameters" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Danh sách tham số
+                    </p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="~/Admin/BackupAndRestore" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Sao lưu/Phục hồi
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <button type="submit" class="nav-link">
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                    <p>Đăng xuất</p>
+                </button>
             </li>
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
 </div>
 <!-- /.sidebar -->
-
-@if (Request.IsAuthenticated)
-{
-    <div style="display:none;">
-        @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { @id = "logOffForm" }))
-        {
-            @Html.AntiForgeryToken();
-        }
-    </div>
-}

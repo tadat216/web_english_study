@@ -8,29 +8,29 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="~/Content/client/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- daterange picker -->
-    <link rel="stylesheet" href="~/Content/client/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/daterangepicker/daterangepicker.css')}}">
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="~/Content/client/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
     <!-- Bootstrap Color Picker -->
-    <link rel="stylesheet" href="~/Content/client/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="~/Content/client/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
     <!-- Select2 -->
-    <link rel="stylesheet" href="~/Content/client/plugins/select2/css/select2.min.css">
-    <link rel="stylesheet" href="~/Content/client/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
     <!-- Bootstrap4 Duallistbox -->
-    <link rel="stylesheet" href="~/Content/client/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
     <!-- BS Stepper -->
-    <link rel="stylesheet" href="~/Content/client/plugins/bs-stepper/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/bs-stepper/css/bs-stepper.min.css')}}">
     <!-- dropzonejs -->
-    <link rel="stylesheet" href="~/Content/client/plugins/dropzone/min/dropzone.min.css">
+    <link rel="stylesheet" href="{{asset('admintle/plugins/dropzone/min/dropzone.min.css')}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="~/Content/client/dist/css/adminlte.min.css">
-    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('admintle/dist/css/adminlte.min.css')}}">
+    <link href="{{asset('Content/PagedList.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    @*<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />*@
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -72,7 +72,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="~/Content/client/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                                <img src="{{asset('admintle/dist/img/user1-128x128.jpg')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Brad Diesel
@@ -88,7 +88,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="~/Content/client/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="{{asset('admintle/dist/img/user8-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         John Pierce
@@ -104,7 +104,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="~/Content/client/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                                <img src="{{asset('admintle/dist/img/user3-128x128.jpg')}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
                                         Nora Silvester
@@ -167,7 +167,7 @@
                 <span class="font-weight-light">Quản lý cửa hàng quần áo</span>
             </a>
 
-            @include('layouts.admin.sidebar')
+            @include('layouts.admin.partial-sidebar')
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
@@ -190,32 +190,32 @@
     </div>
     <!-- ./wrapper -->
     <!-- jQuery -->
-    <script src="~/Content/client/plugins/jquery/jquery.min.js"></script>
+    <script src="{{asset('admintle/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
-    <script src="~/Content/client/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('admintle/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- Select2 -->
-    <script src="~/Content/client/plugins/select2/js/select2.full.min.js"></script>
+    <script src="{{asset('admintle/plugins/select2/js/select2.full.min.js')}}"></script>
     <!-- Bootstrap4 Duallistbox -->
-    <script src="~/Content/client/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="{{asset('admintle/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
     <!-- InputMask -->
-    <script src="~/Content/client/plugins/moment/moment.min.js"></script>
-    <script src="~/Content/client/plugins/inputmask/jquery.inputmask.min.js"></script>
+    <script src="{{asset('admintle/plugins/moment/moment.min.js')}}"></script>
+    <script src="{{asset('admintle/plugins/inputmask/jquery.inputmask.min.js')}}"></script>
     <!-- date-range-picker -->
-    <script src="~/Content/client/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{asset('admintle/plugins/daterangepicker/daterangepicker.js')}}"></script>
     <!-- bootstrap color picker -->
-    <script src="~/Content/client/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <script src="{{asset('admintle/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="~/Content/client/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="{{asset('admintle/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
     <!-- Bootstrap Switch -->
-    <script src="~/Content/client/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="{{asset('admintle/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
     <!-- BS-Stepper -->
-    <script src="~/Content/client/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+    <script src="{{asset('admintle/plugins/bs-stepper/js/bs-stepper.min.js')}}"></script>
     <!-- dropzonejs -->
-    <script src="~/Content/client/plugins/dropzone/min/dropzone.min.js"></script>
+    <script src="{{asset('admintle/plugins/dropzone/min/dropzone.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="~/Content/client/dist/js/adminlte.min.js"></script>
+    <script src="{{asset('admintle/dist/js/adminlte.min.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="~/Content/client/dist/js/demo.js"></script>
+    <script src="{{asset('admintle/dist/js/demo.js')}}"></script>
     <!-- Page specific script -->
     <script>
         $(function () {
@@ -351,13 +351,12 @@
         }
         // DropzoneJS Demo Code End
     </script>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-    <script src="~/Content/ckfinder/ckfinder.js"></script>
-    <script src="~/Content/ckeditor/ckeditor.js"></script>
-    @*<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
-        <script>let table = new DataTable('#myTable');</script>*@
+    
+    
+    <script src="{{asset('admintle/ckfinder/ckfinder.js')}}"></script>
+    <script src="{{asset('admintle/ckeditor/ckeditor.js')}}"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+        <script>let table = new DataTable('#myTable');</script>
 </body>
 </html>
 
@@ -365,7 +364,7 @@
 
     $(document).ready(function () {
         CKEDITOR.replace('txtDetail', {
-            customConfig: '/content/ckeditor/config.js',
+            customConfig: '/admintle/ckeditor/config.js',
             extraAllowedContent: 'span',
         });
     });
@@ -382,45 +381,3 @@
     });
 </script>
 
-@*
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - My ASP.NET Application</title>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
-        </div>
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
-    </body>
-    </html>
-*@
