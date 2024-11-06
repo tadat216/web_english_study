@@ -78,7 +78,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/tests/">Đề thi online</a>
+                                <a class="nav-link" href="/tests-library/">Đề thi online</a>
                             </li>
 
 
@@ -205,7 +205,7 @@
                             <div class='footer-title'>Tài nguyên</div>
                             <ul class="list-unstyled text-small">
 
-                                <li><a href="{{url('/test')}}">Thư viện đề thi</a></li>
+                                <li><a href="/tests-library">Thư viện đề thi</a></li>
                                 <li><a href="/posts/">Blog</a></li>
                                 <li><a href="/materials/">Kho tài liệu</a></li>
                                 <li><a href="/groups/">Nhóm học tập</a></li>
