@@ -8,5 +8,5 @@ use App\Http\Controllers\User\ExamTypeController;
 //     return view('admin.home');
 // })->name('admin.home');
 Route::get('/admin', function () {
-    return view('admin.admin_home');
+    return view('admin.home');
 });
