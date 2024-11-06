@@ -122,7 +122,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="~/Admin/Role" class="nav-link">
+                <a href="admin/role" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
                         Danh sách quyền
