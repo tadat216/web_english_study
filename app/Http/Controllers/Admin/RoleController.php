@@ -11,7 +11,10 @@ use function Laravel\Prompts\form;
 
 class RoleController extends Controller
 {
-
+    public function index(){
+        $roles = DB::table("roles")->get();
+        return view("admin.role.index", ["roles" => $roles]);
+    }
     public function store(Request $request)
     {
         // Validate input

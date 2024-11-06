@@ -1,5 +1,4 @@
-﻿
-@extends('layouts.admin.layout')
+﻿@extends('layouts.admin.layout')
 
 @section('title', 'Roles')
 
@@ -17,15 +16,15 @@
 @section('content')
 <section class="content mt-2" style="background-color: #F4F6F9;">
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
     @if (session('alert'))
-            <div class="alert alert-warning">
-                {{ session('alert') }}
-            </div>
-            @endif
+    <div class="alert alert-warning">
+        {{ session('alert') }}
+    </div>
+    @endif
     <!-- Default box -->
     <div class="card ">
         <div class="card-header">
@@ -41,31 +40,33 @@
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
-
+                        <th>Ngày tạo</th>
+                        <th>Ngày thay đổi</th>
                     </tr>
                 </thead>
                 <tbody>
-                <!-- if (Model != null && Model.Any())
-                    {
-                    var i = 1;
-                    foreach (var item in Model)
-                    {
+                    @php
+                    $i = 0;
+                    @endphp
+                    @foreach ($roles as $role)
+                    @php
+                    $i++;
+                    @endphp
                     <tr>
-                        <td>i</td>
-                        <td>item.Name</td>
+                        <td>{{ $i }}</td>
+                        <td>{{ $role->name }}</td>
+                        <td>{{ $role->created_at }}</td>
+                        <td>{{ $role->updated_at }}</td>
+                        <td>
+                            <a href="{{ route('roles.edit_get', $role->id) }}">Edit</a>
+                        </td>
+                    </tr>
+                    @endforeach
 
-                    </tr>
-                    ++i;
-                    }
-                    }
-                    else
-                    {
-                    <tr>
-                        <td colspan="4">Không có bản ghi nào!!!</td>
-                    </tr>
-                    } -->
+                   
                 </tbody>
             </table>
+            
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
@@ -78,6 +79,3 @@
 </section>
 <!-- /.content -->
 @endsection
-
-
-
