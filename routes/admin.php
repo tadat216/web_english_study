@@ -11,9 +11,8 @@ use App\Http\Controllers\Admin\RoleController;
 Route::get('/admin', function () {
     return view('admin.home');
 });
-Route::get('/admin/role', function () {
-    return view('admin.role.index');
-})->name('roles.index');
+
+Route::get('admin/role', [RoleController::class, 'index'])->name('roles.index');
 Route::get('admin/role/create', function () {
     return view('admin.role.create');
 })->name('roles.create');
